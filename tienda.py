@@ -8,7 +8,7 @@ st.set_page_config(page_title="Control de Ventas Cloud", layout="wide")
 
 # URL de tu Google Sheet (Copia y pega la dirección de tu navegador aquí)
 # Ejemplo: "https://docs.google.com/spreadsheets/d/tu-id-aqui/edit"
-URL_HOJA = "TU_URL_DE_GOOGLE_SHEETS_AQUI"
+URL_HOJA = "https://docs.google.com/spreadsheets/d/1v26kEYIEw7YY4fE_km96bCSycaQ-x1M_k5qBrarRTq8/edit?usp=sharing"
 
 # Conexión
 conn = st.connection("gsheets", type=GSheetsConnection)
@@ -37,3 +37,4 @@ with st.sidebar:
 total = df['monto'].sum() if not df.empty else 0.0
 st.metric("Total Acumulado", f"${total:,.2f}")
 st.dataframe(df, use_container_width=True)
+
